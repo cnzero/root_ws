@@ -32,8 +32,6 @@ void awake_flag_Callback(std_msgs::Int8 msg)
 	awake_flag = msg.data;
 	printf("awake_flag=%d\n",awake_flag);
 	recognize_fail_count = 0;
-
-	
 }
 
 
@@ -57,7 +55,7 @@ int main(int argc, char *argv[])
 	ros::init(argc, argv, "call_rec");    //初始化ROS节点
 	ros::NodeHandle nh;    //创建句柄
  
-	/***离线命令词识别服务客服端创建***/
+	/***离线命令词识别服务客户端创建***/
 	ros::ServiceClient get_offline_recognise_result_client = 
 	nh.serviceClient<xf_mic_asr_offline_line::Get_Offline_Result_srv>("xf_asr_offline_node/get_offline_recognise_result_srv");
 	
