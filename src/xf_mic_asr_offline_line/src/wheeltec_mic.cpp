@@ -73,12 +73,12 @@ int deal_with(unsigned char buffer)
 				    {
 				    	Json::Value content = value["content"];
 				    	std::string iwv_msg = content["info"].asString();
-				    	//cout << "iwv_msg is " << iwv_msg << endl;
+				    	cout << "iwv_msg is " << iwv_msg << endl;
 
 				    	if (reader.parse(iwv_msg,value_iwv))
 				    	{
 				    		angle_int = value_iwv["ivw"]["angle"].asInt();
-				    		//cout << "angle is " << angle_int << endl;
+				    		cout << "angle is " << angle_int << endl;
 				    	}
 				    }
 				    else{
@@ -234,6 +234,8 @@ int set_opt(int fd,int nSpeed, int nBits, unsigned char nEvent, int nStop)
   //printf("set done!\n\r");
     return 0;
 }
+
+
 /**************************************************************************
 函数功能：主函数
 入口参数：无
@@ -247,16 +249,16 @@ int main(int argc, char** argv)
 	ros::NodeHandle node;    //创建句柄
 
 	/***创建唤醒标志位话题发布者***/
-	awake_flag_pub = node.advertise<std_msgs::Int8>(awake_flag,1);
+	awake_flag_pub = node.advertise<std_msgs::Int8>(awake_flag,1);  // "awake_flag"
 
 	/***创建麦克风设备串口打开话题发布者***/
-	voice_flag_pub = node.advertise<std_msgs::Int8>(voice_flag, 1);
+	voice_flag_pub = node.advertise<std_msgs::Int8>(voice_flag, 1);  // "voice_flag"
 
 	/***创建命令词话题发布者***/
-	voice_words_pub = node.advertise<std_msgs::String>(voice_words, 1);
+	voice_words_pub = node.advertise<std_msgs::String>(voice_words, 1);  // "voice_words"
 
 	/*　topic 发布唤醒角度*/
-	pub_awake_angle = node.advertise<std_msgs::Int32>(awake_angle_topic, 1);
+	pub_awake_angle = node.advertise<std_msgs::Int32>(awake_angle_topic, 1);  // "/mic/awake/angle"
 
 	ros::NodeHandle private_n("~");
 
@@ -279,6 +281,7 @@ int main(int argc, char** argv)
             printf(">>>>>唤醒词为:\"%s!\"\n",awake_words);
             //printf("set_opt fd=%d\n",fd);
 
+            // publish "voice_flag"
             for (int i = 0; i < 3; ++i)
             {
                 std_msgs::Int8 voice_flag_msg;
@@ -296,7 +299,7 @@ int main(int argc, char** argv)
 		memset(buffer, 0, 1);
 		read_num = read(fd, buffer, 1);
 		if(read_num>0){	
-			deal_with(buffer[0]);
+			deal_with(buffer[0]);  // update: 1) set `if_awake`, 2) get `angle_int`
         }
 
         if(if_awake)

@@ -1,4 +1,8 @@
-
+<!-- 
+  call_recognition
+  command_recognition
+  node_feedback 
+-->
 <launch>
   <rosparam command="load" file="$(find xf_mic_asr_offline_line)/config/recognition_params.yaml" />
 

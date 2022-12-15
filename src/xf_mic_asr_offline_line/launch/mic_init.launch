@@ -1,4 +1,7 @@
-<!--离线命令词识别-->
+<!--离线命令词识别
+ wheeltec_mic
+ voice_control
+-->
 <launch>
   <rosparam command="load" file="$(find xf_mic_asr_offline_line)/config/appid_params.yaml" />
   <!--设置为功能包的路径-->

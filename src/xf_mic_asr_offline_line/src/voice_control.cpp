@@ -172,7 +172,7 @@ bool Get_Offline_Recognise_Result(xf_mic_asr_offline_line::Get_Offline_Result_sr
 
 		if (whole_result!="")
 		{
-			//printf(">>>>>全部返回结果:　[ %s ]\n", whole_result);
+			printf(">>>>>全部返回结果:　[ %s ]\n", whole_result);
 			Effective_Result effective_ans = show_result(whole_result);
 			if (effective_ans.effective_confidence >= confidence) //如果大于置信度阈值则进行显示或者其他控制操作
 			{
@@ -188,7 +188,7 @@ bool Get_Offline_Recognise_Result(xf_mic_asr_offline_line::Get_Offline_Result_sr
 				res.text = txt_uft8;
 				
 				std_msgs::String msg;
-				msg.data = effective_ans.effective_word;
+				msg.data = effective_ans.effective_word; // ASR effective txt result
 				voice_words_pub.publish(msg);
 				
 			}
@@ -250,6 +250,9 @@ int main(int argc, char *argv[])
 	voice_flag_pub = n.advertise<std_msgs::Int8>(voice_flag, 1);
 
 	/*srv　接收请求，返回离线命令词识别结果*/
+	// Q1) `response` is not used or return
+	// Q2) string ASR effective text is published with `voice_words` topic
+	// Q3) when to run the service and its request-response callback?
 	ros::ServiceServer service_get_wav_list = ndHandle.advertiseService("get_offline_recognise_result_srv", Get_Offline_Recognise_Result);
 
 	std::string begin = "fo|";
