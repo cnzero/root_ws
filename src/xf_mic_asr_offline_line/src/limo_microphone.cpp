@@ -11,7 +11,7 @@
 using namespace std;
 
 ros::Publisher awake_flag_pub;
-ros::Publisher emoji_flag_pub;
+// ros::Publisher emoji_flag_pub;
 ros::Publisher voice_flag_pub;
 ros::Publisher voice_words_pub;
 ros::Publisher awake_angle_pub;
@@ -251,7 +251,7 @@ int main(int argc, char** argv)
 
 	/***创建唤醒标志位话题发布者***/
 	awake_flag_pub = node.advertise<std_msgs::Int8>(awake_flag,1);  // "awake_flag"
-	emoji_flag_pub = node.advertise<std_msgs::String>("emoji",1);  // "emoji_flag"
+	ros::Publisher emoji_flag_pub = node.advertise<std_msgs::String>("emoji",1);  // "emoji_flag"
 
 	/***创建麦克风设备串口打开话题发布者***/
 	voice_flag_pub = node.advertise<std_msgs::Int8>(voice_flag, 1);  // "voice_flag"
@@ -318,7 +318,7 @@ int main(int argc, char** argv)
 			awake_flag_pub.publish(awake_flag_msg);
 
             std_msgs::String emoji_flag_msg;
-			emoji_flag_msg.data = "1";
+			emoji_flag_msg.data = "0";
 			emoji_flag_pub.publish(emoji_flag_msg);
 
 			std_msgs::String msg;

@@ -57,10 +57,18 @@ int main(int argc, char *argv[])
 	// IoT commands words
 	string str_cmd = "";
 	string str_cmd_words = "";
-	string str_IoT_word_L0 = "关闭左转";
-	string str_IoT_word_L1 = "打开左转";
-	string str_IoT_word_R0 = "关闭右转";
-	string str_IoT_word_R1 = "打开右转";
+	string str_IoT_word_L0 = "关闭左灯";
+	string str_IoT_word_L1 = "打开左灯";
+	string str_IoT_word_R0 = "关闭右灯";
+	string str_IoT_word_R1 = "打开右灯";
+
+    std_msgs::String emoji_flag_msg;
+	string str_emoji_0 = "";  // 唤醒
+	string str_emoji_1 = "我很不屑";
+	string str_emoji_2 = "我很兴奋";
+	string str_emoji_3 = "我很惊恐";
+	string str_emoji_4 = "我很愤怒";
+	string str_emoji_5 = "我很难过";
 
 	ros::init(argc, argv, "limo_voice_recognize_commands_publish");    //初始化ROS节点
 	ros::NodeHandle nh;    //创建句柄
@@ -78,6 +86,7 @@ int main(int argc, char *argv[])
 
 	/***唤醒标志位话题发布者创建***/
 	ros::Publisher awake_flag_pub = nh.advertise<std_msgs::Int8>("awake_flag", 1);
+	ros::Publisher emoji_flag_pub = nh.advertise<std_msgs::String>("emoji", 1);
 
 	/***离线命令词识别结果话题发布者创建***/
 	ros::Publisher control = nh.advertise<std_msgs::String>("voice_words", 1);
@@ -144,15 +153,45 @@ int main(int argc, char *argv[])
 					str_cmd_words = str_IoT_word_R1;
 				}
 
+				else if(str_emoji_1 == GetOfflineResult_srv.response.text)
+				{
+					emoji_flag_msg.data = "1";
+				}
+
+				else if(str_emoji_2 == GetOfflineResult_srv.response.text)
+				{
+					emoji_flag_msg.data = "2";
+				}
+
+				else if(str_emoji_3 == GetOfflineResult_srv.response.text)
+				{
+					emoji_flag_msg.data = "3";
+				}
+
+				else if(str_emoji_4 == GetOfflineResult_srv.response.text)
+				{
+					emoji_flag_msg.data = "4";
+				}
+
+				else if(str_emoji_5 == GetOfflineResult_srv.response.text)
+				{
+					emoji_flag_msg.data = "5";
+				}
+
 				else
 				{
 					str_cmd = "NULL";
 					str_cmd_words = "没听懂";
 					printf("voice words command not recognized or pre-set.");
+
+					emoji_flag_msg.data = "NULL";
 				}
 				command.data = str_cmd;
 				IoT_commands_pub.publish(command);
 				std::cout << "\nPublish command --->>> " << str_cmd << str_cmd_words << "\n" << endl;
+
+				emoji_flag_pub.publish(emoji_flag_msg);
+				std::cout << "\nPublish emoji--->>> " << emoji_flag_msg.data << "\n" << endl;
 
 			}
 

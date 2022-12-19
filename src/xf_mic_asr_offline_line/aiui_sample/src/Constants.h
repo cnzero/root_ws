@@ -7,7 +7,8 @@
 //测试音频的路径
 #define TEST_AUDIO_PATH "../config/AIUI/audio/test.pcm"
 
-#define GRAMMAR_FILE_PATH "../config/AIUI/asr/call.bnf"
+// #define GRAMMAR_FILE_PATH "../config/AIUI/asr/call.bnf"
+#define GRAMMAR_FILE_PATH "../config/AIUI/asr/call_limo.bnf"
 
 #define LOG_DIR "../config/AIUI/log"
 
