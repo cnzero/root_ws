@@ -189,7 +189,7 @@ add_dependencies(
 )
 target_link_libraries(voice_control ${catkin_LIBRARIES} offline_record_lib rt dl pthread stdc++ )
 
-
+# call_recognition
 add_executable(call_recognition src/call_recognition.cpp)
 add_dependencies(
   call_recognition
@@ -201,6 +201,22 @@ target_link_libraries(
     ${catkin_LIBRARIES} 
 #    offline_record_lib hid_lib rt dl pthread stdc++ 
 )
+
+# copy from src/call_recognition.cpp
+add_executable(limo_commands src/limo_commands.cpp)
+
+add_dependencies(
+  limo_commands
+  ${xf_mic_package_EXPORTED_TARGETS}
+  xf_mic_asr_offline_line_gencpp
+)
+
+target_link_libraries(
+    limo_commands 
+    ${catkin_LIBRARIES} 
+#    offline_record_lib hid_lib rt dl pthread stdc++ 
+)
+
 
 add_executable(command_recognition 
   src/command_recognition.cpp 
@@ -243,6 +259,22 @@ target_link_libraries(
    ${catkin_LIBRARIES}
    -ljsoncpp 
  )
+
+# copy from src/wheeltec_mic.cpp
+add_executable(limo_microphone
+  src/limo_microphone.cpp 
+)
+add_dependencies(
+  limo_microphone
+  ${xf_mic_package_EXPORTED_TARGETS}
+  xf_mic_asr_offline_line_gencpp
+)
+target_link_libraries(
+   limo_microphone
+   ${catkin_LIBRARIES}
+   -ljsoncpp 
+ )
+
 #############
 ## Install ##
 #############

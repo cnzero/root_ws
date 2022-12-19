@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <memory>
+#include <map>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -33,7 +33,7 @@ struct Set_Awake_Word_srvRequest_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _awake_word_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _awake_word_type;
   _awake_word_type awake_word;
 
 
@@ -185,7 +185,7 @@ struct Printer< ::xf_mic_asr_offline_line::Set_Awake_Word_srvRequest_<ContainerA
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::xf_mic_asr_offline_line::Set_Awake_Word_srvRequest_<ContainerAllocator>& v)
   {
     s << indent << "awake_word: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.awake_word);
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.awake_word);
   }
 };
 

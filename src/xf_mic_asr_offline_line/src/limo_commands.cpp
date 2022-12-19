@@ -55,10 +55,12 @@ int main(int argc, char *argv[])
 	string str5 = "失败10次";				//语音识别相关字符串
 
 	// IoT commands words
-	string str_IoT_word_L0 = "关闭左灯";
-	string str_IoT_word_L1 = "打开左灯";
-	string str_IoT_word_R0 = "关闭右灯";
-	string str_IoT_word_R1 = "打开右灯";
+	string str_cmd = "";
+	string str_cmd_words = "";
+	string str_IoT_word_L0 = "关闭左转";
+	string str_IoT_word_L1 = "打开左转";
+	string str_IoT_word_R0 = "关闭右转";
+	string str_IoT_word_R1 = "打开右转";
 
 	ros::init(argc, argv, "limo_voice_recognize_commands_publish");    //初始化ROS节点
 	ros::NodeHandle nh;    //创建句柄
@@ -81,7 +83,7 @@ int main(int argc, char *argv[])
 	ros::Publisher control = nh.advertise<std_msgs::String>("voice_words", 1);
 
 	/***IoT控制命令字符串发布***/
-	ros::Publisher IoT_commands_pub = nh.advertise<std_msgs::String>("IoT_commands", 1)
+	ros::Publisher IoT_commands_pub = nh.advertise<std_msgs::String>("IoT_commands", 1);
 
 	ros::Rate loop_rate(10);    //循环频率10Hz
 
@@ -111,39 +113,46 @@ int main(int argc, char *argv[])
 			if(get_offline_recognise_result_client.call(GetOfflineResult_srv))    //请求离线命令词识别服务并返回应答为调用成功
 			{
 				//ROS_INFO("succeed to call service \"get_offline_recognise_result_srv\"!");    //打印识别结果、置信度、识别命令词等信息
-				std::cout << "iFLYTEK offline ASR:" << endl;
+				std::cout << "\niFLYTEK offline ASR inference:" << endl;
 				std::cout << "result: " << GetOfflineResult_srv.response.result << endl;
 				std::cout << "fail reason: " << GetOfflineResult_srv.response.fail_reason << endl;
 				std::cout << "text: " << GetOfflineResult_srv.response.text << endl;
 
 				// voice words compare and publish to later Android
 				std_msgs::String command;
-				if(str_IoT_word_L0 == Get_Offline_Result_srv.response.text)
+				if(str_IoT_word_L0 == GetOfflineResult_srv.response.text)
 				{
-					command.data = "L0";
+					str_cmd = "L0";
+					str_cmd_words = str_IoT_word_L0;
 				}
 
-				else if(str_IoT_word_L1 == Get_Offline_Result_srv.response.text)
+				else if(str_IoT_word_L1 == GetOfflineResult_srv.response.text)
 				{
-					command.data = "L1";
+					str_cmd = "L1";
+					str_cmd_words = str_IoT_word_L1;
 				}
 
-				else if(str_IoT_word_R0 == Get_Offline_Result_srv.response.text)
+				else if(str_IoT_word_R0 == GetOfflineResult_srv.response.text)
 				{
-					command.data = "R0";
+					str_cmd = "R0";
+					str_cmd_words = str_IoT_word_R0;
 				}
 
-				else if(str_IoT_word_R1 == Get_Offline_Result_srv.response.text)
+				else if(str_IoT_word_R1 == GetOfflineResult_srv.response.text)
 				{
-					command.data = "R1";
+					str_cmd = "R1";
+					str_cmd_words = str_IoT_word_R1;
 				}
 
 				else
 				{
-					command.data = "";
+					str_cmd = "NULL";
+					str_cmd_words = "没听懂";
 					printf("voice words command not recognized or pre-set.");
 				}
+				command.data = str_cmd;
 				IoT_commands_pub.publish(command);
+				std::cout << "\nPublish command --->>> " << str_cmd << str_cmd_words << "\n" << endl;
 
 			}
 

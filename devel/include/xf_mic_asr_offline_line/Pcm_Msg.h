@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <memory>
+#include <map>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -38,7 +38,7 @@ struct Pcm_Msg_
    typedef int32_t _length_type;
   _length_type length;
 
-   typedef std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>> _pcm_buf_type;
+   typedef std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other >  _pcm_buf_type;
   _pcm_buf_type pcm_buf;
 
 

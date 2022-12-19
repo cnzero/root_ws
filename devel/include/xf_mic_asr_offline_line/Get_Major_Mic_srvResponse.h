@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <memory>
+#include <map>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -37,13 +37,13 @@ struct Get_Major_Mic_srvResponse_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _result_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _result_type;
   _result_type result;
 
    typedef int8_t _mic_id_type;
   _mic_id_type mic_id;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _fail_reason_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _fail_reason_type;
   _fail_reason_type fail_reason;
 
 
@@ -202,11 +202,11 @@ struct Printer< ::xf_mic_asr_offline_line::Get_Major_Mic_srvResponse_<ContainerA
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::xf_mic_asr_offline_line::Get_Major_Mic_srvResponse_<ContainerAllocator>& v)
   {
     s << indent << "result: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.result);
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.result);
     s << indent << "mic_id: ";
     Printer<int8_t>::stream(s, indent + "  ", v.mic_id);
     s << indent << "fail_reason: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.fail_reason);
+    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.fail_reason);
   }
 };
 

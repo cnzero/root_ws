@@ -264,7 +264,7 @@ RT_LIBRARY:FILEPATH=/usr/lib/aarch64-linux-gnu/librt.so
 SETUPTOOLS_DEB_LAYOUT:BOOL=ON
 
 //Name of the computer/site where compile is being run
-SITE:STRING=Nano
+SITE:STRING=jetson
 
 //LSB Distrib tag
 UBUNTU:BOOL=TRUE
@@ -422,12 +422,6 @@ tf2_ros_DIR:PATH=/opt/ros/melodic/share/tf2_ros/cmake
 
 //The directory containing a CMake configuration file for tf.
 tf_DIR:PATH=/opt/ros/melodic/share/tf/cmake
-
-//Value Computed by CMake
-xf_mic_asr_offline_BINARY_DIR:STATIC=/home/jetson/root_ws/build/xf_mic_asr_offline
-
-//Value Computed by CMake
-xf_mic_asr_offline_SOURCE_DIR:STATIC=/home/jetson/root_ws/src/xf_mic_asr_offline
 
 //Value Computed by CMake
 xf_mic_asr_offline_line_BINARY_DIR:STATIC=/home/jetson/root_ws/build/xf_mic_asr_offline_line

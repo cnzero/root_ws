@@ -11,7 +11,7 @@
   	<param name="usart_port_name"  type="string" value="/dev/wheeltec_mic"/>
   </node>
 
-  <node pkg="xf_mic_asr_offline_line" type="limo_commands" name="xf_asr_offline_node" output="screen">
+  <node pkg="xf_mic_asr_offline_line" type="limo_commands" name="limo_commands" output="screen">
     <param name="source_path" type="string" value="$(find xf_mic_asr_offline_line)"/>
   </node>
 
