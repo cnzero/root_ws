@@ -5,7 +5,7 @@
 
 !start <callstart>;
 
-<callstart>:(我|我很|我有点儿|关闭|打开)<choose>;
+<callstart>:(我|我很|我有点儿|关闭|打开|点|点点|摇|摇摇)<choose>;
 <choose>:<emoji>|<commands>;
 <emoji>:不屑|兴奋|惊恐|愤怒|难过;
-<commands>:(左|左边的|右|右边的)灯;
+<commands>:(左|左边的|右|右边的)灯|头;

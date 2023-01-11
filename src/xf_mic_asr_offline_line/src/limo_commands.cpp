@@ -65,10 +65,17 @@ int main(int argc, char *argv[])
     std_msgs::String emoji_flag_msg;
 	string str_emoji_0 = "";  // 唤醒
 	string str_emoji_1 = "我很不屑";
-	string str_emoji_2 = "我很兴奋";
+	string str_emoji_2 = "我很开心";
 	string str_emoji_3 = "我很惊恐";
 	string str_emoji_4 = "我很愤怒";
 	string str_emoji_5 = "我很难过";
+
+	string str_head_H0 = "";
+	string str_head_H1 = "摇摇头";
+	string str_head_H2 = "点点头";
+	   
+	/** final send string message topic**/
+    std_msgs::String voice_command_msg;
 
 	ros::init(argc, argv, "limo_voice_recognize_commands_publish");    //初始化ROS节点
 	ros::NodeHandle nh;    //创建句柄
@@ -93,6 +100,9 @@ int main(int argc, char *argv[])
 
 	/***IoT控制命令字符串发布***/
 	ros::Publisher IoT_commands_pub = nh.advertise<std_msgs::String>("IoT_commands", 1);
+
+	/***final total voice command***/
+	ros::Publisher voice_command_pub = nh.advertise<std_msgs::String>("voice_command", 1);
 
 	ros::Rate loop_rate(10);    //循环频率10Hz
 
@@ -133,24 +143,28 @@ int main(int argc, char *argv[])
 				{
 					str_cmd = "L0";
 					str_cmd_words = str_IoT_word_L0;
+					voice_command_msg.data = "L0";
 				}
 
 				else if(str_IoT_word_L1 == GetOfflineResult_srv.response.text)
 				{
 					str_cmd = "L1";
 					str_cmd_words = str_IoT_word_L1;
+					voice_command_msg.data = "L1";
 				}
 
 				else if(str_IoT_word_R0 == GetOfflineResult_srv.response.text)
 				{
 					str_cmd = "R0";
 					str_cmd_words = str_IoT_word_R0;
+					voice_command_msg.data = "R0";
 				}
 
 				else if(str_IoT_word_R1 == GetOfflineResult_srv.response.text)
 				{
 					str_cmd = "R1";
 					str_cmd_words = str_IoT_word_R1;
+					voice_command_msg.data = "R1";
 				}
 
 				else if(str_emoji_1 == GetOfflineResult_srv.response.text)
@@ -158,9 +172,11 @@ int main(int argc, char *argv[])
 					emoji_flag_msg.data = "1";
 				}
 
+                // 我很开心
 				else if(str_emoji_2 == GetOfflineResult_srv.response.text)
 				{
-					emoji_flag_msg.data = "2";
+					emoji_flag_msg.data = 2;
+					voice_command_msg.data = "E1";
 				}
 
 				else if(str_emoji_3 == GetOfflineResult_srv.response.text)
@@ -173,9 +189,23 @@ int main(int argc, char *argv[])
 					emoji_flag_msg.data = "4";
 				}
 
+                // 我很难过
 				else if(str_emoji_5 == GetOfflineResult_srv.response.text)
 				{
-					emoji_flag_msg.data = "5";
+					emoji_flag_msg.data = 5;
+					voice_command_msg.data = "E2";
+				}
+				
+				// 摇摇头
+				else if(str_head_H1 == GetOfflineResult_srv.response.text)
+				{
+					voice_command_msg.data = "H1";
+				}
+
+                // 点点头
+				else if(str_head_H2 == GetOfflineResult_srv.response.text)
+				{
+					voice_command_msg.data = "H2";
 				}
 
 				else
@@ -185,13 +215,17 @@ int main(int argc, char *argv[])
 					printf("voice words command not recognized or pre-set.");
 
 					emoji_flag_msg.data = "NULL";
+					voice_command_msg.data = "NULL";
 				}
-				command.data = str_cmd;
-				IoT_commands_pub.publish(command);
-				std::cout << "\nPublish command --->>> " << str_cmd << str_cmd_words << "\n" << endl;
+				// command.data = str_cmd;
+				// IoT_commands_pub.publish(command);
+				// std::cout << "\nPublish command --->>> " << str_cmd << str_cmd_words << "\n" << endl;
 
-				emoji_flag_pub.publish(emoji_flag_msg);
-				std::cout << "\nPublish emoji--->>> " << emoji_flag_msg.data << "\n" << endl;
+				// emoji_flag_pub.publish(emoji_flag_msg);
+				// std::cout << "\nPublish emoji--->>> " << emoji_flag_msg.data << "\n" << endl;
+
+				voice_command_pub.publish(voice_command_msg);
+				std::cout << "\nPublish voice command--->>> " << voice_command_msg.data << "\n" << endl;
 
 			}
 

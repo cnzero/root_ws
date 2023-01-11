@@ -262,6 +262,10 @@ int main(int argc, char** argv)
 	/*　topic 发布唤醒角度*/
 	awake_angle_pub = node.advertise<std_msgs::Int32>(awake_angle_topic, 1);  // "/mic/awake/angle"
 
+    /***final send string message topic***/
+    std_msgs::String voice_command_msg;
+    ros::Publisher voice_command_pub = node.advertise<std_msgs::String>("voice_command", 1);
+
 	ros::NodeHandle private_n("~");
 
 	private_n.param<std::string>("usart_port_name",  usart_port_name,  "/dev/wheeltec_mic");
@@ -327,6 +331,9 @@ int main(int argc, char** argv)
 
 			sleep(0.8);
 			if_awake = 0;
+
+            voice_command_msg.data = "T0" + to_string(angle_int) + "E0";
+            voice_command_pub.publish(voice_command_msg);
 		} 
 		ros::spinOnce(); 
 		//ros::spin();     
