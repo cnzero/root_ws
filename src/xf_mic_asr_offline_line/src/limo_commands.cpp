@@ -139,60 +139,78 @@ int main(int argc, char *argv[])
 
 				// voice words compare and publish to later Android
 				std_msgs::String command;
-				if(str_IoT_word_L0 == GetOfflineResult_srv.response.text)
+				//if(str_IoT_word_L0 == GetOfflineResult_srv.response.text)
+				if("关闭左灯" == GetOfflineResult_srv.response.text 
+				   || "关闭左边的灯" == GetOfflineResult_srv.response.text)
 				{
 					str_cmd = "L0";
 					str_cmd_words = str_IoT_word_L0;
 					voice_command_msg.data = "L0";
 				}
 
-				else if(str_IoT_word_L1 == GetOfflineResult_srv.response.text)
+				//else if(str_IoT_word_L1 == GetOfflineResult_srv.response.text)
+				else if("打开左灯" == GetOfflineResult_srv.response.text 
+				        || "打开左边的灯" == GetOfflineResult_srv.response.text)
 				{
 					str_cmd = "L1";
 					str_cmd_words = str_IoT_word_L1;
 					voice_command_msg.data = "L1";
 				}
 
-				else if(str_IoT_word_R0 == GetOfflineResult_srv.response.text)
+				//else if(str_IoT_word_R0 == GetOfflineResult_srv.response.text)
+				else if("关闭右灯" == GetOfflineResult_srv.response.text 
+				        || "关闭右边的灯" == GetOfflineResult_srv.response.text)
 				{
 					str_cmd = "R0";
 					str_cmd_words = str_IoT_word_R0;
 					voice_command_msg.data = "R0";
 				}
 
-				else if(str_IoT_word_R1 == GetOfflineResult_srv.response.text)
+				//else if(str_IoT_word_R1 == GetOfflineResult_srv.response.text)
+				else if ("打开右灯" == GetOfflineResult_srv.response.text 
+				         || "打开右边的灯" == GetOfflineResult_srv.response.text)
 				{
 					str_cmd = "R1";
 					str_cmd_words = str_IoT_word_R1;
 					voice_command_msg.data = "R1";
 				}
 
-				else if(str_emoji_1 == GetOfflineResult_srv.response.text)
+				//else if(str_emoji_1 == GetOfflineResult_srv.response.text)
+				else if("我很不屑" == GetOfflineResult_srv.response.text 
+				        || "我有点儿不屑" == GetOfflineResult_srv.response.text)
 				{
 					emoji_flag_msg.data = "1";
 				}
 
                 // 我很开心
-				else if(str_emoji_2 == GetOfflineResult_srv.response.text)
+				//else if(str_emoji_2 == GetOfflineResult_srv.response.text)
+				else if("我很开心" == GetOfflineResult_srv.response.text 
+				        || "我有点儿开心" == GetOfflineResult_srv.response.text)
 				{
-					emoji_flag_msg.data = 2;
+					emoji_flag_msg.data = "2";
 					voice_command_msg.data = "E1";
-				}
+			    }
 
-				else if(str_emoji_3 == GetOfflineResult_srv.response.text)
+				//else if(str_emoji_3 == GetOfflineResult_srv.response.text)
+				else if("我很惊恐" == GetOfflineResult_srv.response.text
+				        || "我有点儿惊恐" == GetOfflineResult_srv.response.text)
 				{
 					emoji_flag_msg.data = "3";
 				}
 
-				else if(str_emoji_4 == GetOfflineResult_srv.response.text)
+				//else if(str_emoji_4 == GetOfflineResult_srv.response.text)
+				else if("我很愤怒" == GetOfflineResult_srv.response.text 
+				        || "我有点儿愤怒" == GetOfflineResult_srv.response.text)
 				{
 					emoji_flag_msg.data = "4";
 				}
 
                 // 我很难过
-				else if(str_emoji_5 == GetOfflineResult_srv.response.text)
+				// else if(str_emoji_5 == GetOfflineResult_srv.response.text)
+				else if("我很难过" == GetOfflineResult_srv.response.text
+				        || "我有点儿难过" == GetOfflineResult_srv.response.text)
 				{
-					emoji_flag_msg.data = 5;
+					emoji_flag_msg.data = "5";
 					voice_command_msg.data = "E2";
 				}
 				
@@ -221,8 +239,8 @@ int main(int argc, char *argv[])
 				// IoT_commands_pub.publish(command);
 				// std::cout << "\nPublish command --->>> " << str_cmd << str_cmd_words << "\n" << endl;
 
-				// emoji_flag_pub.publish(emoji_flag_msg);
-				// std::cout << "\nPublish emoji--->>> " << emoji_flag_msg.data << "\n" << endl;
+				emoji_flag_pub.publish(emoji_flag_msg);
+				std::cout << "\nPublish emoji--->>> " << emoji_flag_msg.data << "\n" << endl;
 
 				voice_command_pub.publish(voice_command_msg);
 				std::cout << "\nPublish voice command--->>> " << voice_command_msg.data << "\n" << endl;
