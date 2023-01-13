@@ -1,8 +1,8 @@
-# Install script for directory: /home/jetson/root_ws/src/xf_mic_asr_offline_line
+# Install script for directory: /home/agilex/root_ws/src/xf_mic_asr_offline_line
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/jetson/root_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/agilex/root_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,70 +37,75 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/msg" TYPE FILE FILES "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg")
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/msg" TYPE FILE FILES "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/msg" TYPE FILE FILES "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/msg" TYPE FILE FILES "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/srv" TYPE FILE FILES
-    "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
-    "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
-    "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
-    "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
-    "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
-    "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
-    "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
+    "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
+    "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
+    "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
+    "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
+    "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
+    "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
+    "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/cmake" TYPE FILE FILES "/home/jetson/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_line-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/cmake" TYPE FILE FILES "/home/agilex/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_line-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/jetson/root_ws/devel/include/xf_mic_asr_offline_line")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/agilex/root_ws/devel/include/xf_mic_asr_offline_line")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/jetson/root_ws/devel/share/common-lisp/ros/xf_mic_asr_offline_line")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/agilex/root_ws/devel/share/common-lisp/ros/xf_mic_asr_offline_line")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/jetson/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_line.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/agilex/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_line.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/cmake" TYPE FILE FILES "/home/jetson/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_line-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/cmake" TYPE FILE FILES "/home/agilex/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_line-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line/cmake" TYPE FILE FILES
-    "/home/jetson/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_lineConfig.cmake"
-    "/home/jetson/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_lineConfig-version.cmake"
+    "/home/agilex/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_lineConfig.cmake"
+    "/home/agilex/root_ws/build/xf_mic_asr_offline_line/catkin_generated/installspace/xf_mic_asr_offline_lineConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line" TYPE FILE FILES "/home/jetson/root_ws/src/xf_mic_asr_offline_line/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xf_mic_asr_offline_line" TYPE FILE FILES "/home/agilex/root_ws/src/xf_mic_asr_offline_line/package.xml")
 endif()
 

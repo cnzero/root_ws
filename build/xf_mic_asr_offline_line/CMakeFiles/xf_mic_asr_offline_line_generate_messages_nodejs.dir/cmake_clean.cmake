@@ -1,14 +1,14 @@
 file(REMOVE_RECURSE
+  "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/msg/Pcm_Msg.js"
+  "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/msg/position.js"
+  "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.js"
+  "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.js"
+  "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.js"
+  "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.js"
+  "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Set_Led_On_srv.js"
+  "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.js"
+  "/home/agilex/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Start_Record_srv.js"
   "CMakeFiles/xf_mic_asr_offline_line_generate_messages_nodejs"
-  "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/msg/Pcm_Msg.js"
-  "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/msg/position.js"
-  "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.js"
-  "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.js"
-  "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.js"
-  "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.js"
-  "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Set_Led_On_srv.js"
-  "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Start_Record_srv.js"
-  "/home/jetson/root_ws/devel/share/gennodejs/ros/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.js"
 )
 
 # Per-language clean rules from dependency scanning.

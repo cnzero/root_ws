@@ -2,7 +2,7 @@
 
 message(STATUS "xf_mic_asr_offline_line: 2 messages, 7 services")
 
-set(MSG_I_FLAGS "-Ixf_mic_asr_offline_line:/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
+set(MSG_I_FLAGS "-Ixf_mic_asr_offline_line:/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
 # Find all generators
 find_package(gencpp REQUIRED)
@@ -17,49 +17,49 @@ add_custom_target(xf_mic_asr_offline_line_generate_messages ALL)
 
 
 
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
 add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" ""
 )
 
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
 add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" ""
 )
 
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
 add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" ""
 )
 
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
 add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" ""
 )
 
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
 add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" ""
 )
 
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
 add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" ""
 )
 
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
 add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" ""
 )
 
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
 add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" ""
 )
 
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
 add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" ""
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "xf_mic_asr_offline_line" "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" ""
 )
 
 #
@@ -69,13 +69,13 @@ add_custom_target(_xf_mic_asr_offline_line_generate_messages_check_deps_${_filen
 ### Section generating for lang: gencpp
 ### Generating Messages
 _generate_msg_cpp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_msg_cpp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -83,43 +83,43 @@ _generate_msg_cpp(xf_mic_asr_offline_line
 
 ### Generating Services
 _generate_srv_cpp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_cpp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_cpp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_cpp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_cpp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_cpp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_cpp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -137,23 +137,23 @@ add_custom_target(xf_mic_asr_offline_line_generate_messages_cpp
 add_dependencies(xf_mic_asr_offline_line_generate_messages xf_mic_asr_offline_line_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_cpp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_cpp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_cpp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_cpp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_cpp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_cpp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_cpp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_cpp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_cpp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -166,13 +166,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS xf_mic_asr_offline_line_generate_me
 ### Section generating for lang: geneus
 ### Generating Messages
 _generate_msg_eus(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_msg_eus(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -180,43 +180,43 @@ _generate_msg_eus(xf_mic_asr_offline_line
 
 ### Generating Services
 _generate_srv_eus(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_eus(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_eus(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_eus(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_eus(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_eus(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_eus(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -234,23 +234,23 @@ add_custom_target(xf_mic_asr_offline_line_generate_messages_eus
 add_dependencies(xf_mic_asr_offline_line_generate_messages xf_mic_asr_offline_line_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_eus _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_eus _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_eus _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_eus _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_eus _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_eus _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_eus _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_eus _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_eus _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -263,13 +263,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS xf_mic_asr_offline_line_generate_me
 ### Section generating for lang: genlisp
 ### Generating Messages
 _generate_msg_lisp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_msg_lisp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -277,43 +277,43 @@ _generate_msg_lisp(xf_mic_asr_offline_line
 
 ### Generating Services
 _generate_srv_lisp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_lisp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_lisp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_lisp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_lisp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_lisp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_lisp(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -331,23 +331,23 @@ add_custom_target(xf_mic_asr_offline_line_generate_messages_lisp
 add_dependencies(xf_mic_asr_offline_line_generate_messages xf_mic_asr_offline_line_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_lisp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_lisp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_lisp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_lisp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_lisp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_lisp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_lisp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_lisp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_lisp _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -360,13 +360,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS xf_mic_asr_offline_line_generate_me
 ### Section generating for lang: gennodejs
 ### Generating Messages
 _generate_msg_nodejs(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_msg_nodejs(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -374,43 +374,43 @@ _generate_msg_nodejs(xf_mic_asr_offline_line
 
 ### Generating Services
 _generate_srv_nodejs(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_nodejs(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_nodejs(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_nodejs(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_nodejs(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_nodejs(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_nodejs(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -428,23 +428,23 @@ add_custom_target(xf_mic_asr_offline_line_generate_messages_nodejs
 add_dependencies(xf_mic_asr_offline_line_generate_messages xf_mic_asr_offline_line_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_nodejs _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_nodejs _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_nodejs _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_nodejs _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_nodejs _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_nodejs _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_nodejs _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_nodejs _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_nodejs _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
@@ -457,13 +457,13 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS xf_mic_asr_offline_line_generate_me
 ### Section generating for lang: genpy
 ### Generating Messages
 _generate_msg_py(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_msg_py(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -471,43 +471,43 @@ _generate_msg_py(xf_mic_asr_offline_line
 
 ### Generating Services
 _generate_srv_py(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_py(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_py(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_py(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_py(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_py(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xf_mic_asr_offline_line
 )
 _generate_srv_py(xf_mic_asr_offline_line
-  "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv"
+  "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv"
   "${MSG_I_FLAGS}"
   ""
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/xf_mic_asr_offline_line
@@ -525,23 +525,23 @@ add_custom_target(xf_mic_asr_offline_line_generate_messages_py
 add_dependencies(xf_mic_asr_offline_line_generate_messages xf_mic_asr_offline_line_generate_messages_py)
 
 # add dependencies to all check dependencies targets
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_py _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_py _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_py _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/msg/Pcm_Msg.msg" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_py _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_py _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/msg/position.msg" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_py _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Set_Led_On_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_py _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Start_Record_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_py _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
-get_filename_component(_filename "/home/jetson/root_ws/src/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.srv" NAME_WE)
+get_filename_component(_filename "/home/agilex/root_ws/src/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.srv" NAME_WE)
 add_dependencies(xf_mic_asr_offline_line_generate_messages_py _xf_mic_asr_offline_line_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility

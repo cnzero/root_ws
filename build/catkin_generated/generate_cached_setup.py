@@ -12,16 +12,16 @@ try:
     from catkin.environment_cache import generate_environment_script
 except ImportError:
     # search for catkin package in all workspaces and prepend to path
-    for workspace in '/home/jetson/root_ws/devel;/opt/ros/melodic'.split(';'):
+    for workspace in '/home/agilex/inspection_ws/devel;/home/agilex/cv_bridge_ws/devel;/home/agilex/pan_tilt_ws/devel;/home/agilex/path_planning_ws/devel;/home/agilex/agilex_ws/devel;/opt/ros/melodic'.split(';'):
         python_path = os.path.join(workspace, 'lib/python2.7/dist-packages')
         if os.path.isdir(os.path.join(python_path, 'catkin')):
             sys.path.insert(0, python_path)
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/home/jetson/root_ws/devel/env.sh')
+code = generate_environment_script('/home/agilex/root_ws/devel/env.sh')
 
-output_filename = '/home/jetson/root_ws/build/catkin_generated/setup_cached.sh'
+output_filename = '/home/agilex/root_ws/build/catkin_generated/setup_cached.sh'
 with open(output_filename, 'w') as f:
     # print('Generate script for cached setup "%s"' % output_filename)
     f.write('\n'.join(code))

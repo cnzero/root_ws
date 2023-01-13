@@ -268,7 +268,7 @@ if __name__ == '__main__':
 
         if not args.local:
             # environment at generation time
-            CMAKE_PREFIX_PATH = r'/home/jetson/root_ws/devel;/opt/ros/melodic'.split(';')
+            CMAKE_PREFIX_PATH = r'/home/agilex/inspection_ws/devel;/home/agilex/cv_bridge_ws/devel;/home/agilex/pan_tilt_ws/devel;/home/agilex/path_planning_ws/devel;/home/agilex/agilex_ws/devel;/opt/ros/melodic'.split(';')
         else:
             # don't consider any other prefix path than this one
             CMAKE_PREFIX_PATH = []

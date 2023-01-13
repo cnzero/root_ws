@@ -252,6 +252,7 @@ int main(int argc, char** argv)
 	/***创建唤醒标志位话题发布者***/
 	awake_flag_pub = node.advertise<std_msgs::Int8>(awake_flag,1);  // "awake_flag"
 	ros::Publisher emoji_flag_pub = node.advertise<std_msgs::String>("emoji",1);  // "emoji_flag"
+	ros::Publisher voice_command_pub = node.advertise<std_msgs::String>("voice_command",1);  // "emoji_flag"
 
 	/***创建麦克风设备串口打开话题发布者***/
 	voice_flag_pub = node.advertise<std_msgs::Int8>(voice_flag, 1);  // "voice_flag"
@@ -261,10 +262,6 @@ int main(int argc, char** argv)
 
 	/*　topic 发布唤醒角度*/
 	awake_angle_pub = node.advertise<std_msgs::Int32>(awake_angle_topic, 1);  // "/mic/awake/angle"
-
-    /***final send string message topic***/
-    std_msgs::String voice_command_msg;
-    ros::Publisher voice_command_pub = node.advertise<std_msgs::String>("voice_command", 1);
 
 	ros::NodeHandle private_n("~");
 
@@ -325,6 +322,16 @@ int main(int argc, char** argv)
 			emoji_flag_msg.data = "0";
 			emoji_flag_pub.publish(emoji_flag_msg);
 
+            std_msgs::String voice_command_msg;
+            voice_command_msg.data = "H0";
+            voice_command_pub.publish(voice_command_msg);
+
+            voice_command_msg.data = "D" + std::to_string(angle_int / 45);
+            voice_command_pub.publish(voice_command_msg);
+            printf(">>>>>>>direction info: %s", voice_command_msg.data);
+            cout<<">>>>>>>direction info:" << voice_command_msg.data << "\n" << endl;
+
+
 			std_msgs::String msg;
 			msg.data = "机器人唤醒";
 			voice_words_pub.publish(msg);
@@ -332,7 +339,8 @@ int main(int argc, char** argv)
 			sleep(0.8);
 			if_awake = 0;
 
-            voice_command_msg.data = "T0" + to_string(angle_int) + "E0";
+            // voice_command_msg.data = "T0" + to_string(angle_int) + "E0";
+            voice_command_msg.data = "H0";
             voice_command_pub.publish(voice_command_msg);
 		} 
 		ros::spinOnce(); 

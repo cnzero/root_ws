@@ -67,14 +67,14 @@ set(xf_mic_asr_offline_line_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(xf_mic_asr_offline_line_SOURCE_PREFIX /home/jetson/root_ws/src/xf_mic_asr_offline_line)
-  set(xf_mic_asr_offline_line_DEVEL_PREFIX /home/jetson/root_ws/devel)
+  set(xf_mic_asr_offline_line_SOURCE_PREFIX /home/agilex/root_ws/src/xf_mic_asr_offline_line)
+  set(xf_mic_asr_offline_line_DEVEL_PREFIX /home/agilex/root_ws/devel)
   set(xf_mic_asr_offline_line_INSTALL_PREFIX "")
   set(xf_mic_asr_offline_line_PREFIX ${xf_mic_asr_offline_line_DEVEL_PREFIX})
 else()
   set(xf_mic_asr_offline_line_SOURCE_PREFIX "")
   set(xf_mic_asr_offline_line_DEVEL_PREFIX "")
-  set(xf_mic_asr_offline_line_INSTALL_PREFIX /home/jetson/root_ws/install)
+  set(xf_mic_asr_offline_line_INSTALL_PREFIX /home/agilex/root_ws/install)
   set(xf_mic_asr_offline_line_PREFIX ${xf_mic_asr_offline_line_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jetson/root_ws/install/lib;/home/jetson/root_ws/devel/lib;/opt/ros/melodic/lib)
+    foreach(path /home/agilex/root_ws/install/lib;/home/agilex/inspection_ws/devel/lib;/home/agilex/cv_bridge_ws/devel/lib;/home/agilex/pan_tilt_ws/devel/lib;/home/agilex/path_planning_ws/devel/lib;/home/agilex/agilex_ws/devel/lib;/opt/ros/melodic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

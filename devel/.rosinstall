@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/jetson/root_ws/devel/setup.sh
+    local-name: /home/agilex/root_ws/devel/setup.sh

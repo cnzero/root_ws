@@ -215,16 +215,24 @@ int main(int argc, char *argv[])
 				}
 				
 				// 摇摇头
-				else if(str_head_H1 == GetOfflineResult_srv.response.text)
+				else if("摇摇头" == GetOfflineResult_srv.response.text
+                        || "摇头" == GetOfflineResult_srv.response.text )
 				{
 					voice_command_msg.data = "H1";
 				}
 
                 // 点点头
-				else if(str_head_H2 == GetOfflineResult_srv.response.text)
+				else if("点点头" == GetOfflineResult_srv.response.text
+                        || "点头" == GetOfflineResult_srv.response.text)
 				{
 					voice_command_msg.data = "H2";
 				}
+                
+                // 小艺我回来了
+                else if("小艺我回来了" == GetOfflineResult_srv.response.text)
+                {
+                    voice_command_msg.data = "W0";
+                }
 
 				else
 				{
@@ -245,8 +253,7 @@ int main(int argc, char *argv[])
 				voice_command_pub.publish(voice_command_msg);
 				std::cout << "\nPublish voice command--->>> " << voice_command_msg.data << "\n" << endl;
 
-			}
-
+			} 
 			else        //请求离线命令词识别服务并返回应答为调用失败
 			{
 				ROS_INFO("failed to call service \"get_offline_recognise_result_srv\"!");

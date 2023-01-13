@@ -1,16 +1,16 @@
 file(REMOVE_RECURSE
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/msg/_Pcm_Msg.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/msg/__init__.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/msg/_position.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Get_Awake_Angle_srv.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Get_Major_Mic_srv.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Get_Offline_Result_srv.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Set_Awake_Word_srv.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Set_Led_On_srv.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Set_Major_Mic_srv.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Start_Record_srv.py"
+  "/home/agilex/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/__init__.py"
   "CMakeFiles/xf_mic_asr_offline_line_generate_messages_py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/msg/_Pcm_Msg.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/msg/_position.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Get_Major_Mic_srv.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Set_Major_Mic_srv.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Get_Awake_Angle_srv.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Set_Awake_Word_srv.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Set_Led_On_srv.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Start_Record_srv.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/_Get_Offline_Result_srv.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/msg/__init__.py"
-  "/home/jetson/root_ws/devel/lib/python2.7/dist-packages/xf_mic_asr_offline_line/srv/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

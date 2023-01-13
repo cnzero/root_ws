@@ -1,7 +1,8 @@
 file(REMOVE_RECURSE
+  "/home/agilex/root_ws/devel/lib/xf_mic_asr_offline_line/command_recognition"
+  "/home/agilex/root_ws/devel/lib/xf_mic_asr_offline_line/command_recognition.pdb"
   "CMakeFiles/command_recognition.dir/src/command_recognition.cpp.o"
-  "/home/jetson/root_ws/devel/lib/xf_mic_asr_offline_line/command_recognition.pdb"
-  "/home/jetson/root_ws/devel/lib/xf_mic_asr_offline_line/command_recognition"
+  "CMakeFiles/command_recognition.dir/src/command_recognition.cpp.o.d"
 )
 
 # Per-language clean rules from dependency scanning.

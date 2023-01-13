@@ -1,15 +1,15 @@
 file(REMOVE_RECURSE
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/manifest.l"
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/msg/Pcm_Msg.l"
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/msg/position.l"
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.l"
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.l"
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.l"
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.l"
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Set_Led_On_srv.l"
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.l"
+  "/home/agilex/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Start_Record_srv.l"
   "CMakeFiles/xf_mic_asr_offline_line_generate_messages_eus"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/msg/Pcm_Msg.l"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/msg/position.l"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Get_Major_Mic_srv.l"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Set_Major_Mic_srv.l"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Get_Awake_Angle_srv.l"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Set_Awake_Word_srv.l"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Set_Led_On_srv.l"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Start_Record_srv.l"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/srv/Get_Offline_Result_srv.l"
-  "/home/jetson/root_ws/devel/share/roseus/ros/xf_mic_asr_offline_line/manifest.l"
 )
 
 # Per-language clean rules from dependency scanning.

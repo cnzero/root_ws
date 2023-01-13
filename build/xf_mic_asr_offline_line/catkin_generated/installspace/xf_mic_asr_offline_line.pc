@@ -1,4 +1,4 @@
-prefix=/home/jetson/root_ws/install
+prefix=/home/agilex/root_ws/install
 
 Name: xf_mic_asr_offline_line
 Description: Description of xf_mic_asr_offline_line
