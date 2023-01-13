@@ -7,7 +7,8 @@ using namespace std;
 
 char *OTHER;
 char *WHOLE;
-std::string head = "aplay -D plughw:CARD=Device,DEV=0 ";
+// std::string head = "aplay -D plughw:CARD=Device,DEV=1 ";
+std::string head = "aplay ";
 
 std::string audio_path = "";
 

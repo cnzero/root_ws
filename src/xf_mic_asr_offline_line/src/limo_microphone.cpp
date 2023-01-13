@@ -8,6 +8,9 @@
 #include <std_msgs/Int8.h>
 #include <std_msgs/String.h>
 
+#include <joint.h>
+std::string limo_feedback_audio_path = "~/root_ws/src/xf_mic_asr_offline_line/limo_feedback_audio";
+
 using namespace std;
 
 ros::Publisher awake_flag_pub;
@@ -307,6 +310,11 @@ int main(int argc, char** argv)
 
         if(if_awake)
         {
+
+			// speak out
+    	    OTHER = (char*) "/nihaoxiaoyi.wav";//语音反馈
+		    WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		    system(WHOLE);
 
         	printf(">>>>>唤醒角度为:%d\n", angle_int);
             

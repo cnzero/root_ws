@@ -17,6 +17,9 @@
 #include <iostream>
 #include <geometry_msgs/Twist.h>
 
+#include <joint.h>
+std::string limo_feedback_audio_path = "~/root_ws/src/xf_mic_asr_offline_line/limo_feedback_audio";
+
 using namespace std;
 int awake_flag = 0;    //唤醒标志位
 int confidence_threshold ;
@@ -146,6 +149,12 @@ int main(int argc, char *argv[])
 					str_cmd = "L0";
 					str_cmd_words = str_IoT_word_L0;
 					voice_command_msg.data = "L0";
+
+					// speak out
+    	            OTHER = (char*) "/kongzhimingling.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
+
 				}
 
 				//else if(str_IoT_word_L1 == GetOfflineResult_srv.response.text)
@@ -155,6 +164,11 @@ int main(int argc, char *argv[])
 					str_cmd = "L1";
 					str_cmd_words = str_IoT_word_L1;
 					voice_command_msg.data = "L1";
+
+					// speak out
+    	            OTHER = (char*) "/kongzhimingling.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
 				}
 
 				//else if(str_IoT_word_R0 == GetOfflineResult_srv.response.text)
@@ -164,6 +178,12 @@ int main(int argc, char *argv[])
 					str_cmd = "R0";
 					str_cmd_words = str_IoT_word_R0;
 					voice_command_msg.data = "R0";
+
+					// speak out
+    	            OTHER = (char*) "/kongzhimingling.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
+
 				}
 
 				//else if(str_IoT_word_R1 == GetOfflineResult_srv.response.text)
@@ -173,6 +193,11 @@ int main(int argc, char *argv[])
 					str_cmd = "R1";
 					str_cmd_words = str_IoT_word_R1;
 					voice_command_msg.data = "R1";
+
+					// speak out
+    	            OTHER = (char*) "/kongzhimingling.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
 				}
 
 				//else if(str_emoji_1 == GetOfflineResult_srv.response.text)
@@ -189,6 +214,11 @@ int main(int argc, char *argv[])
 				{
 					emoji_flag_msg.data = "2";
 					voice_command_msg.data = "E1";
+
+					// speak out
+    	            OTHER = (char*) "/wohenkaixin.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
 			    }
 
 				//else if(str_emoji_3 == GetOfflineResult_srv.response.text)
@@ -196,6 +226,11 @@ int main(int argc, char *argv[])
 				        || "我有点儿惊恐" == GetOfflineResult_srv.response.text)
 				{
 					emoji_flag_msg.data = "3";
+
+					// speak out
+    	            OTHER = (char*) "/wohenjingkong.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
 				}
 
 				//else if(str_emoji_4 == GetOfflineResult_srv.response.text)
@@ -203,6 +238,11 @@ int main(int argc, char *argv[])
 				        || "我有点儿愤怒" == GetOfflineResult_srv.response.text)
 				{
 					emoji_flag_msg.data = "4";
+
+					// speak out
+    	            OTHER = (char*) "/wohenfennu.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
 				}
 
                 // 我很难过
@@ -212,6 +252,11 @@ int main(int argc, char *argv[])
 				{
 					emoji_flag_msg.data = "5";
 					voice_command_msg.data = "E2";
+
+					// speak out
+    	            OTHER = (char*) "/wohennanguo.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
 				}
 				
 				// 摇摇头
@@ -219,6 +264,11 @@ int main(int argc, char *argv[])
                         || "摇头" == GetOfflineResult_srv.response.text )
 				{
 					voice_command_msg.data = "H1";
+
+					// speak out
+    	            OTHER = (char*) "/yaoyaotou.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
 				}
 
                 // 点点头
@@ -226,12 +276,22 @@ int main(int argc, char *argv[])
                         || "点头" == GetOfflineResult_srv.response.text)
 				{
 					voice_command_msg.data = "H2";
+
+					// speak out
+    	            OTHER = (char*) "/diandiantou.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
 				}
                 
                 // 小艺我回来了
                 else if("小艺我回来了" == GetOfflineResult_srv.response.text)
                 {
                     voice_command_msg.data = "W0";
+
+					// speak out
+    	            OTHER = (char*) "/nihaoxiaoyi.wav";//语音反馈
+		            WHOLE = join((head + limo_feedback_audio_path), OTHER);
+		            system(WHOLE);
                 }
 
 				else

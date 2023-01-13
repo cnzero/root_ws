@@ -451,7 +451,8 @@ int main(int argc, char** argv)
 	/***创建寻找语音开启标志位话题订阅者***/
 	ros::Subscriber voice_flag_sub = n.subscribe("voice_flag", 1, voice_flag_Callback);
 
-	n.param("/command_recognition/audio_path", audio_path, std::string("~/catkin_ws1111/src/xf_mic_asr_offline/feedback_voice"));
+	// n.param("/command_recognition/audio_path", audio_path, std::string("~/catkin_ws1111/src/xf_mic_asr_offline/feedback_voice"));
+	n.param("/command_recognition/audio_path", audio_path, std::string("~/root_ws/src/xf_mic_asr_offline/feedback_voice"));
 
 
 	n.param<float>("/I_position_x", I_position_x, 1);
