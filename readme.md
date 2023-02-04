@@ -10,6 +10,12 @@
 
 <!-- /code_chunk_output -->
 
+# 直接测试
+启动 `roslaunch xf_mic_asr_offline_line limo.launch`，这一步应该直接就terminal里显示进行“你好小艺”的提醒，即等待被唤醒。
+
+- Q：运行成功，但是一直都无法进行唤醒？
+- A: 麦克风的USB连接，尽量往前面的USB-hub连接，后面一级的USB-hub可能无法支撑供电与通讯。
+
 # 语音交互方案
 
 1. 唤醒。
@@ -29,6 +35,14 @@
 # Attention
 
 - `src/voice_control.cpp` L233, L244的参数配置，是否需要修改，暂时还没有修改
+
+# FAQ
+- Q1:在不同的设备上如何使用`aplay ` 播放音频
+A1: 首先使用`aplay xxx.wav`，如果无法播放出来，说明声卡没有选对。`aplay -D sysdefault:CARD=Device_1 xxx.wav` 这里选定了指定的设备。
+如何找设备呢？使用`aplay -h` 看这个`aplay`的相关命令，尤其是`aplay -l` 或 `aplay -L` 
+
+- Q2:
+
 
 # Q&A zhigui Chen
 

@@ -19,6 +19,16 @@
 #include <std_msgs/Int32.h>
 #include <sys/stat.h>
 
+// pcm data transfer
+#include "sstream"
+#include <iostream>
+#include <fstream>
+#include <std_msgs/ByteMultiArray.h>
+
+// pcm publisher
+ros::Publisher pcm_data_publisher;
+std_msgs::ByteMultiArray pcm_data;
+
 
 ros::Publisher voice_words_pub;
 ros::Publisher awake_flag_pub;
@@ -170,6 +180,11 @@ bool Get_Offline_Recognise_Result(xf_mic_asr_offline_line::Get_Offline_Result_sr
 		printf(">>>>>开始一次语音识别！\n");
 		get_the_record_sound(denoise_sound_path);
 
+		// TODO: when to send PCM file to Android cell-phone on ROS-msg
+		// PCM file: `denoise_sound_path`
+		// When To send:
+		// case-1: `whole_result` is not empty, and too low confidence for white-list contents
+
 		if (whole_result!="")
 		{
 			printf(">>>>>全部返回结果:　[ %s ]\n", whole_result);
@@ -200,6 +215,30 @@ bool Get_Offline_Recognise_Result(xf_mic_asr_offline_line::Get_Offline_Result_sr
 				res.result = "fail";
 				res.fail_reason = "low_confidence error or 11212_license_expired_error";
 				res.text = " ";
+
+				// failed to ASR for white-list content with certain confidence, 
+				// then send pcm file to Android phone
+                // TODO:
+				// printf("xxxxxx: None Empty results with too-low confidence, then send PCM-data to Android ASR.");
+                // ifstream dirStream(denoise_sound_path);
+				// if (!dirStream)
+				// {
+				// 	cout<<"Unable to open local PCM file"<<endl;
+				// }
+				// else
+				// {
+				// 	cout<<"Successfully open local PCM file"<<endl;
+
+				//     char pcm_char;
+				//     dirStream.get(pcm_char);
+				//     pcm_data.data.push_back(pcm_char);
+
+				//     pcm_data_publisher.publish(pcm_data);
+				// }
+				// if (dirStream.eof())
+				// {
+				// 	dirStream.close();
+				// }
 			}
 		}
 		else
@@ -248,6 +287,8 @@ int main(int argc, char *argv[])
 	awake_flag_pub = n.advertise<std_msgs::Int8>(awake_flag, 1);
 
 	voice_flag_pub = n.advertise<std_msgs::Int8>(voice_flag, 1);
+    
+	pcm_data_publisher = n.advertise<std_msgs::ByteMultiArray>("pcm_data", 1);
 
 	/*srv　接收请求，返回离线命令词识别结果*/
 	// Q1) `response` is not used or return

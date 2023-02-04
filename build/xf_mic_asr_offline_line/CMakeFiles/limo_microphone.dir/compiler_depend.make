@@ -1145,7 +1145,8 @@ xf_mic_asr_offline_line/CMakeFiles/limo_microphone.dir/src/limo_microphone.cpp.o
   /opt/ros/melodic/include/std_msgs/Int32.h \
   /opt/ros/melodic/include/ros/message_operations.h \
   /opt/ros/melodic/include/std_msgs/Int8.h \
-  /opt/ros/melodic/include/std_msgs/String.h
+  /opt/ros/melodic/include/std_msgs/String.h \
+  /home/agilex/root_ws/src/xf_mic_asr_offline_line/include/joint.h
 
 
 /opt/ros/melodic/include/std_msgs/Int8.h:
@@ -2585,6 +2586,8 @@ xf_mic_asr_offline_line/CMakeFiles/limo_microphone.dir/src/limo_microphone.cpp.o
 /usr/include/boost/predef/os/solaris.h:
 
 /usr/include/boost/preprocessor/array/data.hpp:
+
+/home/agilex/root_ws/src/xf_mic_asr_offline_line/include/joint.h:
 
 /usr/include/boost/type_traits/is_float.hpp:
 

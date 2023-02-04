@@ -1147,4 +1147,5 @@ xf_mic_asr_offline_line/CMakeFiles/limo_microphone.dir/src/limo_microphone.cpp.o
  /opt/ros/melodic/include/ros/message_operations.h
  /opt/ros/melodic/include/std_msgs/Int8.h
  /opt/ros/melodic/include/std_msgs/String.h
+ /home/agilex/root_ws/src/xf_mic_asr_offline_line/include/joint.h
 

@@ -1002,4 +1002,10 @@ xf_mic_asr_offline_line/CMakeFiles/voice_control.dir/src/voice_control.cpp.o: \
  /home/agilex/root_ws/devel/include/xf_mic_asr_offline_line/Get_Offline_Result_srvResponse.h \
  /opt/ros/melodic/include/std_msgs/Int8.h \
  /opt/ros/melodic/include/std_msgs/Int32.h \
- /usr/include/aarch64-linux-gnu/sys/stat.h
+ /usr/include/aarch64-linux-gnu/sys/stat.h /usr/include/c++/7/fstream \
+ /usr/include/aarch64-linux-gnu/c++/7/bits/basic_file.h \
+ /usr/include/aarch64-linux-gnu/c++/7/bits/c++io.h \
+ /usr/include/c++/7/bits/fstream.tcc \
+ /opt/ros/melodic/include/std_msgs/ByteMultiArray.h \
+ /opt/ros/melodic/include/std_msgs/MultiArrayLayout.h \
+ /opt/ros/melodic/include/std_msgs/MultiArrayDimension.h

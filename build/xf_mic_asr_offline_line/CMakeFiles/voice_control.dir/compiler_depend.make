@@ -1134,8 +1134,21 @@ xf_mic_asr_offline_line/CMakeFiles/voice_control.dir/src/voice_control.cpp.o: /h
   /home/agilex/root_ws/devel/include/xf_mic_asr_offline_line/Get_Offline_Result_srvResponse.h \
   /opt/ros/melodic/include/std_msgs/Int8.h \
   /opt/ros/melodic/include/std_msgs/Int32.h \
-  /usr/include/aarch64-linux-gnu/sys/stat.h
+  /usr/include/aarch64-linux-gnu/sys/stat.h \
+  /usr/include/c++/7/fstream \
+  /usr/include/aarch64-linux-gnu/c++/7/bits/basic_file.h \
+  /usr/include/aarch64-linux-gnu/c++/7/bits/c++io.h \
+  /usr/include/c++/7/bits/fstream.tcc \
+  /opt/ros/melodic/include/std_msgs/ByteMultiArray.h \
+  /opt/ros/melodic/include/std_msgs/MultiArrayLayout.h \
+  /opt/ros/melodic/include/std_msgs/MultiArrayDimension.h
 
+
+/opt/ros/melodic/include/std_msgs/ByteMultiArray.h:
+
+/usr/include/c++/7/bits/fstream.tcc:
+
+/usr/include/aarch64-linux-gnu/c++/7/bits/c++io.h:
 
 /opt/ros/melodic/include/std_msgs/Int8.h:
 
@@ -1220,6 +1233,8 @@ xf_mic_asr_offline_line/CMakeFiles/voice_control.dir/src/voice_control.cpp.o: /h
 /usr/include/boost/core/noncopyable.hpp:
 
 /usr/include/boost/type_traits/function_traits.hpp:
+
+/usr/include/aarch64-linux-gnu/c++/7/bits/basic_file.h:
 
 /usr/include/boost/utility/identity_type.hpp:
 
@@ -1849,6 +1864,8 @@ xf_mic_asr_offline_line/CMakeFiles/voice_control.dir/src/voice_control.cpp.o: /h
 
 /usr/include/aarch64-linux-gnu/c++/7/bits/c++locale.h:
 
+/opt/ros/melodic/include/std_msgs/MultiArrayDimension.h:
+
 /usr/include/boost/smart_ptr/detail/local_sp_deleter.hpp:
 
 /usr/include/c++/7/ostream:
@@ -2092,6 +2109,8 @@ xf_mic_asr_offline_line/CMakeFiles/voice_control.dir/src/voice_control.cpp.o: /h
 /usr/include/c++/7/climits:
 
 /usr/include/c++/7/ext/string_conversions.h:
+
+/opt/ros/melodic/include/std_msgs/MultiArrayLayout.h:
 
 /usr/include/boost/numeric/conversion/detail/preprocessed/numeric_cast_traits_long_long.hpp:
 
@@ -2838,6 +2857,8 @@ xf_mic_asr_offline_line/CMakeFiles/voice_control.dir/src/voice_control.cpp.o: /h
 /usr/include/stdlib.h:
 
 /usr/include/c++/7/algorithm:
+
+/usr/include/c++/7/fstream:
 
 /usr/include/c++/7/bits/stl_algo.h:
 
